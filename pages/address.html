@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Laundry Idle - Address</title>
+    <link rel='shortcut icon' type='image/x-icon' href="../images/icons/favicon.png"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+    <script type="text/javascript">
+
+      let DetergentType;
+      let imgElement;
+
+      function selectDetergentType(type, element)
+      {
+        //if the clicked image source does not have the word '_pink' in it, you are selecting the image
+        if (element.src.indexOf("_pink") == -1)
+        {
+          element.src = "../images/project/" + type + "_pink.png";
+        }
+      }
+    </script>
+    <link rel="stylesheet" type="text/css" href="../styles/project.css">
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-light mb-3">
+          <div class="container">
+              <a class="navbar-brand" href="../index.html"><img src="../images/icons/logo.png" class="img-fluif" class="img-responsive"></a>
+              <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav">
+                      <li class="nav-item">
+                          <a class="nav-link" href="../pages/project.html">Project</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="../pages/guidance.html">Guidance</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="../pages/members.html">Members</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="../pages/contact.html">Contact</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+
+    </header>
+
+<style>
+body {
+    font-family: sans-serif;
+    font-size: 24px;
+    padding: 8px;
+  }
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.containerx {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+input[type=email] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #ff9e98;
+  color: white;
+  padding: 12px;
+  border: none;
+  width: 100%;
+  border-radius: 35px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 600px) {
+
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+</style>
+<body>
+<main class="mt-4 text-start">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <h1>Address</h1>
+          </div>
+        </div>
+
+<div class="row">
+  <div class="col-75">
+    <div class="containerx">
+      <form action="billing.html">
+
+        <div class="row">
+          <div class="col-50">
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Enter Your Name" required>
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter Your E-mail Id" required><br>
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="Street Name" required>
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="City Name" required>
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="State Name" required>
+              </div>
+              <div class="col-50">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="Postal Code" required>
+              </div>
+            </div>
+            <input type="submit" value="Save"  class="btn">
+          </div>
+
+      </form>
+    </div>
+  </div>
+  </div>
+</div>
+<br><br>
+<footer class="mt-4">
+
+    <div class="container">
+      <div class="d-flex row-hl">
+            <div class="mr-auto p-2 item-hl">&copy; Pixel Gangster</div>
+            <div class="p-2 item-hl"><img src="../images/icons/instagram.png" alt="instagram" id="footer-insta"></div>
+            <div class="p-2 item-hl"><img src="../images/icons/facebook.png" alt="facebook" id="footer-fb"></div>
+            <div class="p-2 item-hl"><img src="../images/icons/twitter.png" alt="twitter" id="footer-twit"></div>
+      </div>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+crossorigin="anonymous"></script>
+</body>
+</html>
